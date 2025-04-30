@@ -1,0 +1,10 @@
+clc
+clear
+close all
+
+%% 设置参数
+img = imread('WindowsXP.jpg');
+img = rescale(img);
+theta = -30;
+%% 最近邻插值
+near = imrotate(img,theta,"nearest","")
