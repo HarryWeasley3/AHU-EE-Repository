@@ -1,0 +1,7 @@
+# Electronic-circuit-experiments
+
+这里是AHU 电子信息工程学院电子线路实验资料仓库
+
+在进行通频带测量的实验中可以使用NI Multisim 14.3中的交流分析导出分析数据为excle文件然后使用matlab读取绘图
+
+同时在晶体管单级放大器中添加了origin绘图文件

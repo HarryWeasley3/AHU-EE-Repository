@@ -1,0 +1,140 @@
+%  TEX program=xelatex
+
+\documentclass[12p,UTF8]{article}
+\setlength\paperheight{26cm}
+\setlength\paperwidth{18.4cm}
+\usepackage[fontset=windows,zihao={-4}]{ctex} % Chinese support, using Windows fonts
+\usepackage{setspace} % 导入 setspace 宏包
+\usepackage{graphicx} % Insert images
+\usepackage{listings} % Print source code
+\usepackage{color} % Color support
+\usepackage{booktabs} % Professional table support
+\usepackage{pdflscape} % Landscape pages support in PDF
+\usepackage{hyperref} % Hypertext links support for cross-referencing
+\usepackage{geometry} % Page layout customization
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{fontspec} % 导入 fontspec 宏包，用于设置字体
+% 
+% \geometry{left = 8 cm, right=8cm , top = 3cm, bottom = 3cm}
+% Customize hyperref format (it's set to no special format here)
+\hypersetup{hidelinks}
+% 设置全局页面边距
+\geometry{left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm}
+% 设置全局英文字体
+\setmainfont{Times New Roman} % 你可以将 Times New Roman 替换为你想要的字体
+% Declare directories to search for graphics files for graphicx
+\graphicspath{{logo/}}
+
+
+
+% Define new command for title page
+\newcommand{\reporttitle}[2]{
+  \LARGE\textsf{#1}\quad\underline{\makebox[12em]{#2}}
+}
+\newcommand{\reportinfo}[2]{
+  \large\makebox[4em]{\textsf{#1}}\quad\underline{\makebox[15em]{#2}}
+}
+
+% The document begins here
+\begin{document}
+\begin{spacing}{1.25} % 设置全局行距为1.25倍
+  \begin{titlepage}
+     \centering
+     % \vspace*{0.2\fill}
+     % \vspace*{-20pt}
+     \includegraphics[width=\linewidth]{ahu1}\\[3cm] % Change the school logo here (See the logo/ directory) and adjust the height
+     % \includegraphics[height=144pt]{pku-text-logo}\\[48pt] % Change the school logo here (See the logo/ directory) and adjust the height
+     % {\huge\textsf{课\ 程\ 实\ 验\ 报\ 告}}\\[48pt]
+     {\zihao{2} \heiti 电子线路课程总结报告 }\\[4cm]
+     % \reporttitle{实验名称}{立扫帚实验}\\[72pt]
+     % \reportinfo{课程名称}{麻瓜研究}\\[8pt]
+     \reportinfo{\zihao{-2}\songti 学\hspace{\fill}院}{\zihao{-2}\songti 电子信息工程学院}\\[10pt]
+     \reportinfo{\zihao{-2}\songti 专\hspace{\fill}业}{\zihao{-2}\songti 电子信息工程专业}\\[8pt]
+     \reportinfo{\zihao{-2}\songti 年\hspace{\fill}级}{\zihao{-2} \songti 23级}\\[8pt]
+     \reportinfo{\zihao{-2}\songti 学\hspace{\fill}号}{\zihao{-2}\songti P8100}\\[8pt]
+     \reportinfo{\zihao{-2}\songti 姓\hspace{\fill}名}{\zihao{-2}\songti 电子出森}\\
+     \vspace*{\fill}
+  \end{titlepage}
+  % \newgeometry{left = 3.17cm, right = 3.17cm, top = 2.54cm , bottom=2.54cm}
+  \tableofcontents
+  \newpage
+  \songti
+  \section{实验仪器设备使用总结}
+  在本学期的电子线路实验中主要用到的实验仪器有：示波器，信号发生器，直
+  流电源，台式万用表。其中直流电源为实验提供工作电压，在实验过程中一般先设置工作
+  电压，为了保护电路元件同时会设置电流最大值以保护电路，大大降低了电路元件损坏的
+  风险。同时在差分放大器的实验，多级晶体管负反馈电路以及集成运放构成的三角波方波发
+  生器实验中，通过直接将通道一负极与通道二正极相连接并接地的方式来获得实验所需的+12V电压，
+  -12V电压，0电压。较之前的直流源相比设置更为简单。之前的直流电源需要通过仪器上的按钮来实现相
+  连而不可直接相连。同时在设置输出时可采用跟踪模式。
+  \section{实验过程中的问题及解决方法}
+  在实验过程中，主要遇到的问题有：电路连接错误，电路元件损坏，电路工作不稳定等。在电路连接错误时，
+  主要是由于实验中电路连接较为复杂，有时会出现连接错误，此时需要仔细检查电路连接，查看电路图，
+  找出错误并进行更正。在电路元件损坏时，主要是由于电路工作电压设置不当，电流过大，导致电路元件损坏，
+  此时需要更换电路元件。在电路工作不稳定时，主要是由于电路元件损坏，电路连接错误等原因导致，
+  也可能是仪器设置问题，此时需要仔细检查电路连接，更换电路元件，找出问题并进行解决。
+  尤其在集成运放构成的三角波方波发生器实验中需要注意电路连接问题同时涉及的电阻较多，
+  在出现问题的时候需要排查电阻阻值是否有问题。在差分放大器的实验中需要注意三级管的摆
+  放并不是面对面摆放而是平行摆放。
+  在多级反馈放大器实验中可以根据实验内容顺序搭建电路，实验的过程也是对电路的验证过程。
+
+  \section{实验心得体会}
+  通过本学期的电子线路实验，我对电子线路的基本原理，电路的搭建，电路的调试等方面有了更深入的了解，同时也
+  提高了自己的动手能力，实验能力，解决问题的能力等。在实验中，我遇到了很多问题，但通过自己的努力，最终都
+  得到了解决，这让我更加坚信只要有信心，有毅力，就一定能够克服困难，取得成功。通过本学期的电子线路实验，
+  我不仅学到了很多知识，还提高了自己的实践能力，这对我今后的学习和工作都有很大的帮助。希望在今后的学习和
+  工作中，我能够继续努力，取得更好的成绩。
+
+\end{spacing}
+\end{document}
+
+
+ % \section{实验过程}
+  % \subsection{扫帚的选择}
+  % 不同的扫帚参数各异，这里列出了部分扫帚的参数，请见表 \ref{broomsticks}。
+
+  % % Insert a three-line table
+  % \begin{table}[htbp]
+  %   \centering
+  %   \begin{tabular}{cccc}
+  %     \toprule
+  %     序号 & 名称 & 上市时间 & 最高时速 \\
+  %     \midrule
+  %     1 & 彗星290 & 1995年 & 60\,mph \\
+  %     2 & 光轮1000 & 1967年 & 100\,mph \\
+  %     3 & 光轮2001 & 1992年 & >\,100\,mph \\
+  %     4 & 火弩箭 & 1993年 & 150\,mph \\
+  %     \bottomrule
+  %   \end{tabular}
+  %   \caption{部分扫帚的参数对比}
+  %   \label{broomsticks}
+  % \end{table}
+
+
+  % Insert source code
+  % \lstinputlisting[style=cpp-style]{random.cpp}
+
+  % Insert an image in a separate landscape page
+  % \begin{landscape}
+  %   \begin{figure}
+  %     \centering
+  %     \includegraphics[width=\linewidth]{Nimbus2001}
+  %     \caption{光轮2001扫帚}
+  %     \label{Nimbus2001}
+  %   \end{figure}
+  % \end{landscape}
+
+  % \begin{figure}
+  %   % \centering
+  %   \includegraphics[width=\linewidth]{Nimbus2001}
+  %   \caption{光轮2001扫帚}
+  %   \label{Nimbus2001}
+  % \end{figure}
+
+  % \subsection{扫帚起竖}
+  % 光轮 2001 扫帚如图 \ref{Nimbus2001} 所示，与麻瓜使用的扫帚相比，有以下区别：
+  % \begin{enumerate}
+  %   \item 扫帚末端较尖，同时在各个方向上都不是平面；
+  %   \item 扫帚柄有一定弯曲，重心不易估计。
+  % \end{enumerate}
